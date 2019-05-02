@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Lua chon trinh duyet
+<select id="Trinhduyet">
+    <option value="Edge" >Edge</option>
+    <option value="Chrom" >Chrom</option>
+    <option value="Firefox" >Firefox</option>
+    <option value="Safari" >Safari</option>
+    <option value="Opera" >Opera</option>
+</select>
+<br>
+<button onclick="Kiemtra()">Kiemtra</button>
+<script>
+    function Kiemtra() {
+        let name=document.getElementById('Trinhduyet').value;
+        switch (name) {
+            case 'Edge':
+                alert("You've got Edge");
+                break;
+            case 'Chrom':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert("Okay we support these browsers too");
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+    }
+</script>
+</body>
+</html>
