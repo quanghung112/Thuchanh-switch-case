@@ -14,18 +14,19 @@ Nhap so vao day
         so = parseInt(a);
         if (!a) {
             alert('moi nhap so');
-        } else if (a == '0') {
-            alert('0');
         } else {
-            test = so / Math.sqrt(Math.pow(so, 2));
-            alert(test);
-            switch (test) {
-                case '1' :
-                    alert('1');
+            switch (so == 0) {
+                case true :
+                    alert('0');
                     break;
-                case  '-1' :
-                    alert('-1');
-                    break;
+                default:
+                    switch (so > 0) {
+                        case true:
+                            alert('1');
+                            break;
+                        default:
+                            alert('-1');
+                    }
             }
         }
     }
